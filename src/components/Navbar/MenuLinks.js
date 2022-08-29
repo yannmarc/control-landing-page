@@ -19,7 +19,7 @@ function MenuLinks() {
         },
         {
             id: 3, 
-            title: 'contacts'
+            title: 'Contacts'
         }
     ]
 

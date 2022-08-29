@@ -87,6 +87,11 @@ a:visited {
   height: 100%;
 }
 
+.button:not(:hover)::before{
+ width: 30px;
+ background-color: red;
+}
+
 .button:hover span {
   z-index: 1;
   color: var(--clr-secondary);
@@ -328,12 +333,13 @@ a:visited {
 
 .feature-desc {
   text-align: center;
+  margin-right: 0 !important;
 }
 
 .wrapper .container {
   width: 100%;
   background-color: var(--clr-secondary);
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .text-section {
@@ -354,6 +360,7 @@ a:visited {
 
 .footer-section {
   width: 100%;
+  padding-top: 3rem;
 }
 
 .footer-section .wrapper {
@@ -528,12 +535,13 @@ a:visited {
     text-align: left;
     margin-left: 4rem;
     width: 50%;
+    margin-right: 4rem !important;
   }
 
   /* Footer section */
 
   .footer-section .wrapper {
-    padding-bottom: 164px;
+    padding-bottom: 50px;
   }
 
   .footer-link {
