@@ -1,7 +1,10 @@
 import React, { Fragment } from 'react'
 import images from '../constants/images'
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 function Companies() {
+    const random = Math.floor(Math.random() *4);
 
     const iconList = [images.iconPayPal, images.iconWebflow, images.iconGoogle, images.iconAdobe]
   return (
@@ -17,7 +20,7 @@ function Companies() {
                         {
                             iconList.map((icon, index) => {
                                 return (
-                                    <li className='item'>
+                                    <li className='item' data-aos="fade-up" data-aos-delay={random * 500} data-aos-duration="700">
                                         <img src={icon}/>
                                     </li>
                                 )

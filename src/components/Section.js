@@ -1,8 +1,15 @@
-import React, { Fragment } from 'react'
-import images from '../constants/images'
-import Button from './Button'
+import React, { Fragment, useEffect } from 'react';
+import images from '../constants/images';
+import Button from './Button';
+import Aos from 'aos';
+import 'animate.css';
 
 function Section() {
+
+    useEffect(() => {
+        Aos.init();
+        Aos.refresh();
+    })
   return (
     <Fragment>
         <section className="section-patner">
@@ -24,8 +31,8 @@ function Section() {
                         </div>
                     </div>
                     <div className="col-2 relate">
-                        <div className="col-2-img"><img src={images.card} alt="image of the card" /></div>
-                        <span className="green-back"></span>
+                        <div className="col-2-img" data-aos="flip-left" data-aos-duration="1300"><img src={images.card} alt="image of the card" /></div>
+                        <span className="green-back" data-aos="zoom-in-down" data-aos-durtion="1500" data-aos-delay="1000"></span>
                         <span className="img-floatin"><img src={images.iconVector} alt="s line image vector" /></span>
                     </div>
                 </div>
